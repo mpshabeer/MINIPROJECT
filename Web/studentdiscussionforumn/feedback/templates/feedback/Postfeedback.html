@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>post Feedback</title>
+</head>
+<body>
+	<center>
+		<h1>POST FEEDBACK</h1>
+	<form method="POST">
+        {% csrf_token %}
+	<table>
+		<tr>
+			<th>
+		STUDENT ID :</th>
+		<td><input type="text" name="sid"></td>
+		</tr>
+		<tr >
+			<td colspan="3" rowspan="3">
+				<textarea name="feedback"></textarea>
+		</tr>
+        <tr></tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value="POST"></td>
+        </tr>
+</table>
+
+	</center>
+	</form>
+
+</body>
+</html>

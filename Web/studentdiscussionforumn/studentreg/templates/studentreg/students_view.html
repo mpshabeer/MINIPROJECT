@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Mail</th>
+            <th>gender</th>
+            <th>Department</th>
+            <th>Sem</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>STATUS</th>
+            <th></th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+
+
+
+        </tr>
+        {% for i in x %}
+        <tr>
+            <td>{{ i.sid }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.mobileno }}</td>
+            <td>{{ i.address }}</td>
+            <td>{{ i.mail }}</td>
+            <td>{{ i.gender }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.semester }}</td>
+            <td>{{ i.username }}</td>
+            <td>{{ i.password }}</td>
+            <td>{{ i.status }}</td>
+
+
+            <td><a href="{% url 'approve' idd=i.sid %}">APPROVE</a> </td>
+            <td><a href="{% url 'up' idd=i.sid %}" >UPDATE</a></td>
+            <td><a href="{% url 'delete' idd=i.sid %}">DELETE</a> </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>
