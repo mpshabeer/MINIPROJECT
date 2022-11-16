@@ -1,0 +1,50 @@
+{% extends 'temp/Facultyhome.html' %}
+{% block base %}
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+
+{#				<div class="dc-head">#}
+{#					<div class="dc-head-img">#}
+{#						<a href="#"><img src="/static/images/ds.jpg" title="dc-name" /></a>#}
+{#					</div>#}
+{#					<div class="dc-head-info">#}
+{#						<h3>{{ i.topic }}</h3>#}
+{#						<span>{{ i.semester }} Semester</span>#}
+{#					</div>#}
+{#					<div class="clear"> </div>#}
+{#					<div class="dc-profile">#}
+{#						<p>{{ i.description }}</p>#}
+{#						<a href="#">Read care study</a>#}
+{#					</div>#}
+{#				</div>#}
+{#{% endfor %}#}
+{#</body>#}
+{#</html>#}
+{#{% endblock %}#}
+
+{% for i in x %}
+ <div class="col-md-4 mb-4">
+                    <div class="card border-0 mb-2">
+                        <a href="/chat/fac/{{ i.tid }}" ><img class="card-img-top" src="/static/{{ i.image }}" alt=""></a>
+                        <div class="card-body bg-white p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
+                                <h5 class="m-0 ml-3 text-truncate">{{ i.topic }}</h5>
+                            </div>
+                            <p>{{ i.description }}</p>
+                            <div class="d-flex">
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> {{ i.semester }}</small>
+                                <a href="/chat/files/{{ i.tid }}" ><small class="mr-3"><i class="fa fa-folder text-primary"></i> Upload Files</small></a>
+                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    {% endfor %}
+{% endblock %}

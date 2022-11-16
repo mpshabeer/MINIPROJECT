@@ -1,0 +1,24 @@
+{% extends 'temp/USER2.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHAT</title>
+</head>
+<body>
+<form method="post">
+<table border="1" style="height: 100px; width: 250px;" >
+	<tr>
+		<td style="height: 50px;" class="btn-success">CONTACT</td>
+	</tr>
+    {% for i in uu %}
+	<tr>
+        <td style="height: 50px;" class="bg-light" ><a href="/chat/dc/{{ i.d_id }}">
+            <img src="/static/av.png" alt="Avatar" style="border-radius: 50%; height: 30px; width:30px;">&nbsp;&nbsp;{{ i.name }}</a></td>
+	</tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

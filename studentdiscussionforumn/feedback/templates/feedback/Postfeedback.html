@@ -1,0 +1,37 @@
+{% extends 'temp/student home.html' %}
+{% block base %}
+<html>
+<head>
+	<title>post Feedback</title>
+</head>
+<body>
+	<center>
+		<h1>POST FEEDBACK</h1>
+	<form method="POST">
+        {% csrf_token %}
+	<table>
+		<tr>
+			<td>
+		STUDENT ID :</td>
+		<td><input type="text" name="sid"></td>
+		</tr>
+		<tr >
+            <td></td>
+			<td colspan="3" rowspan="3">
+				<textarea name="feedback"></textarea>
+		</tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td></td>
+
+            <td><input type="submit" value="POST"></td>
+        </tr>
+</table>
+
+	</center>
+	</form>
+
+</body>
+</html>
+{% endblock %}

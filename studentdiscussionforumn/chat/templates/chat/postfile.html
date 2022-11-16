@@ -1,0 +1,29 @@
+{% extends 'temp/Facultyhome.html' %}
+{% block base %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post File</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table >
+    <tr>
+        <th>Description</th>
+        <td><input type="text" name="desc"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="file" name="file"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit"></td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>
+{% endblock %} }

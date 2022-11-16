@@ -1,0 +1,27 @@
+{% extends 'temp/student home.html' %}
+{% block base %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ViewFile</title>
+</head>
+<body>
+<table>
+    <tr><th>description</th>
+    <th>File</th>
+    <th>Date</th>
+        <th>Time</th>
+    </tr>
+    {% for i in ok %}
+    <tr>
+<td>{{ i.description }}</td>
+    <td>{{ i.file }}</td>
+    <td>{{ i.date }}</td>
+    <td>{{ i.time }}</td>
+        <td><a href="/static/{{ i.file }}" >Download</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

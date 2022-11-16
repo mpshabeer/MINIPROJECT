@@ -1,0 +1,35 @@
+{% extends 'temp/Facultyhome.html' %}
+{% block base %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<center><table border="2">
+    <tr>
+        <th>Tid</th>
+        <th>Topic</th>
+        <th>Description</th>
+        <th>Semester</th>
+        <th>Edit</th>
+        <th></th>
+
+    </tr>
+    {% for i in x %}
+    <tr>
+
+        <td>{{ i.tid }}</td>
+        <td>{{ i.topic }}</td>
+        <td>{{ i.description }}</td>
+        <td>{{ i.semester }}</td>
+        <td><a href="/topic/edit/{{ i.tid }}" >EDIT</a></td>
+       <td><a href="{% url 'del' idd=i.tid %}">DELETE</a> </td>
+        {% endfor %}
+    </tr>
+</table>
+</center>
+
+</body>
+</html>
+{% endblock %} }

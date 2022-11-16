@@ -1,0 +1,26 @@
+{% extends 'temp/USER1.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHAT</title>
+</head>
+<body>
+<form method="post">
+<table border="1" style="height: 100px; width: 250px;" >
+	<tr>
+		<td>CONTACT</td>
+        <td rowspan="2"><div>{% block base3 %}
+                             {% endblock %}</div></td>
+	</tr>
+    {% for i in u %}
+	<tr>
+		<td>{{ i.name  }}</td>
+	</tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

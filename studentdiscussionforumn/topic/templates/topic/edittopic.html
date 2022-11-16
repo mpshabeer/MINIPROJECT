@@ -1,0 +1,42 @@
+{% extends 'temp/Facultyhome.html' %}
+{% block base %}
+<html>
+<head>
+	<title>create topic</title>
+</head>
+<body><center>
+
+	<h1>MANAGE TOPIC</h1>
+
+<form method="POST" enctype="multipart/form-data">
+     {% csrf_token %}
+
+<table>
+
+	<tr>
+		<td>Topic</td>
+		<td><input type="text" name="tname" value="{{ x.topic }}"></td>
+	</tr>
+	<tr>
+		<td>Description</td>
+		<td><textarea name="des" values="{{ x.description }}"></textarea></td>
+	</tr>
+	<tr>
+		<td>Semester</td>
+		<td><input type="number" name="sem" value="{{ x.semester }}"></td>
+	</tr>
+        <tr>
+        <td>add img</td>
+        <td><input type="file" name="img" value="{{ x.image }}"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" value="submit"></td>
+    </tr>
+
+</table> </form>
+	</center>
+
+</body>
+</html>
+{% endblock %}
